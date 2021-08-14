@@ -1,0 +1,17 @@
+# training data & model
+data
+model
+
+# pyhon cache
+*__pycache__
+.ipynb_checkpoints
+0.0.7
+
+# PyCharm file
+.idea
+
+# Server license
+server.crt
+server.key
+server.pfx
+ssl.conf
