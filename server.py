@@ -17,8 +17,16 @@ from DataCutter import DataCutter
 
 app = Flask(__name__)
 
-line_bot_api = LineBotApi('hSIP6xn8exyRAcEMSCpxCw2Z/gGCA5+xK+BTbyttTgM8LFVApKSmngknbpxhQgC3p0EjY4UvhKeuBlifdof8uPUJ7L4+x14Nw+FnACSZOLP20GKkMAZYKx9b27QunHeRkjui2p8z1fh+9wS8QH/+NwdB04t89/1O/w1cDnyilFU=')
-handler = WebhookHandler('76d605a13c6286fc7a425a03ae80b683')
+with open('line-secret/secret', 'r') as f:
+    secret = f.readline()
+with open('line-secret/token', 'r') as f:
+    token = f.readline()
+    
+print('secret: {}'.format(secret))
+print('token: {}'.format(token))
+
+line_bot_api = LineBotApi(token)
+handler = WebhookHandler(secret)
 
 
 @app.route("/callback", methods=['POST'])

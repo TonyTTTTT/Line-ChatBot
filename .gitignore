@@ -15,3 +15,6 @@ server.crt
 server.key
 server.pfx
 ssl.conf
+
+# Line's access key and token
+line-secret
