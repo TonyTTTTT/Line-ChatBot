@@ -21,7 +21,7 @@ with open('line-secret/secret', 'r') as f:
     secret = f.readline()
 with open('line-secret/token', 'r') as f:
     token = f.readline()
-    
+
 print('secret: {}'.format(secret))
 print('token: {}'.format(token))
 
@@ -83,7 +83,11 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text=res))
 
+@app.route("/test", methods=['GET'])
+def test():
+    h1 = '<h1>Hello World!</h1>'
+    return h1
 
 if __name__ == "__main__":
     app.run(debug=True)
-    # app.run(ssl_context=('server.crt', 'server.key'))
+    # app.run(ssl_context=('server.crt', 'server.key'), debug=True)
