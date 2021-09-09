@@ -11,7 +11,7 @@ class DataCutter:
         return self.sen_cut
 
     def save(self):
-        f = open('./data/data.txt', 'a')
+        f = open('./data/data.txt', 'a', encoding='utf8')
         f.write('+++$+++ ')
         for element in self.sen_cut:
             f.write(element)
