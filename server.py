@@ -11,7 +11,6 @@ from linebot.exceptions import (
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
-from SentimentPredictor import SentimentPredictor, LSTM_Net
 from SentimentPredictorV2 import SentimentPredictor
 from DataCutter import DataCutter
 
